@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tugas PBW Query Builder</title>
-</head>
-<body>
+@extends('layout.ceria')
 
-	<h2>Tugas PBW Query Builder/5026201012</h2>
+@section('title', 'MUTASI')
+
+@section('isikonten')
+
+@section('judulhalaman', 'EDIT MUTASI')
+
+	<h2>Tugas PBW Query Builder</h2>
 	<h3>Data Mutasi</h3>
 
 	<a href="/mutasi"> Kembali</a>
@@ -25,9 +26,5 @@
 	</form>
 	@endforeach
 
+ @endsection
 
-</body>
-</html>
-
-</body>
-</html>
