@@ -6,7 +6,12 @@
 
 @section('judulhalaman', 'TAMBAH MUTASI')
 
-	<h2>Tugas PBW Query Builder</h2>
+<style>
+    .tabel{
+        padding: 10px ;
+        border: 1 px solid black;
+    }
+</style>
 	<h3>Data Mutasi</h3>
 
 	<a href="/mutasi"> Kembali</a>
@@ -16,11 +21,25 @@
 
 	<form action="/mutasi/store" method="post">
 		{{ csrf_field() }}
-		ID Pegawai <input type="number" name="idpegawai" required="required"> <br/>
-		Departemen <input type="text" name="departemen" required="required"> <br/>
-		Sub Departemen <input type="text" name="subdepartemen" required="required"> <br/>
-		Mulai Bertugas <input type="datetime" name="mulaibertugas" required="required"> <br/>
-		<input type="submit" value="Simpan Data">
+        <table>
+            <tr>
+                <td class="tabel"> ID Pegawai </td>
+                <td class="tabel"> <input type="number" name="idpegawai" required="required"> </td>
+            </tr>
+            <tr>
+                <td class="tabel"> Departemen  </td>
+                <td class="tabel"> <input type="text" name="departemen" required="required"> </td>
+            </tr>
+            <tr>
+                <td class="tabel"> Sub Departemen  </td>
+                <td class="tabel"> <input type="text" name="subdepartemen" required="required"> </td>
+            </tr>
+            <tr>
+                <td class="tabel"> Mulai Bertugas  </td>
+                <td class="tabel"> <input type="datetime" name="mulaibertugas" required="required"> </td>
+            </tr>
+        </table>
+        <input type="submit" value="Simpan Data">
 	</form>
 
     @endsection

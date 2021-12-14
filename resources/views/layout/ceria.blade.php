@@ -99,8 +99,8 @@
           <a href="http://127.0.0.1:8000/pegawai">Pegawai</a>
           <a href="http://127.0.0.1:8000/absen">Absen</a>
           <a href="http://127.0.0.1:8000/mutasi">Mutasi</a>
-          <a href="#">Minggu depan</a>
-          <a href="#">Praktikum</a>
+          <a href="http://127.0.0.1:8000/kursi">Kursi</a>
+          <a href="#">P</a>
         </div>
 
         <div id="main">

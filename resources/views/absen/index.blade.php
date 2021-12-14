@@ -21,22 +21,31 @@
 
 	<br/>
 	<br/>
+    <div class="container" align="center">
+        <form action="/absen/cari" method="GET">
+            <input type="text" class="form-control" name="cari" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
+            <input type="submit" class="btn btn-default" value="CARI">
+        </form>
+    </div><br><br>
+
 
 	<table class="table table-success table-striped">
 		<tr>
-			<th>ID</th>
-			<th>ID Pegawai</th>
+
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
 		@foreach($absen as $p)
 		<tr>
-			<td>{{ $p->ID }}</td>
-			<td>{{ $p->IDPegawai }}</td>
+
+			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->Tanggal }}</td>
 			<td>{{ $p->Status }}</td>
 			<td>
+                <a href="/absen/view/{{ $p->ID }}"class="btn btn-danger">View Detail</a>
+                |
 				<a href="/absen/edit/{{ $p->ID }}" class="btn btn-warning" >Edit</a>
 				|
 				<a href="/absen/hapus/{{ $p->ID }}" class="btn btn-danger" >Hapus</a>
@@ -44,6 +53,9 @@
 		</tr>
 		@endforeach
 	</table>
+    {{ $absen->links() }}
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

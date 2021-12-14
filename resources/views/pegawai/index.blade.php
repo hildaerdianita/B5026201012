@@ -3,34 +3,37 @@
 @section('title', 'PEGAWAI')
 
 @section('isikonten')
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+<style>
+    .tabel{
+        padding: 10px ;
+        border: 1 px solid black;
+    }
+</style>
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Pegawai</h3>
+<h3>Data Pegawai</h3>
+<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
+<br>
 
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-
-	<br/>
-	<br/>
+    <div class="container" align="center">
+        <form action="/pegawai/cari" method="GET">
+            <input type="text" class="form-control" name="cari" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
+            <input type="submit" class="btn btn-default" value="CARI">
+        </form>
+    </div><br><br>
 
 	<table border="1">
 		<tr>
-			<th>Nama</th>
-			<th>Jabatan</th>
-			<th>Umur</th>
-			<th>Alamat</th>
-			<th>Opsi</th>
+			<th class="tabel" style="width: 25%">Nama</th>
+            <th class="tabel" style="width: 20%">Alamat</th>
+            <th class="tabel" style="width: 15%">Opsi</th>
 		</tr>
 		@foreach($pegawai as $p)
 		<tr>
-			<td>{{ $p->pegawai_nama }}</td>
-			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
-			<td>{{ $p->pegawai_alamat }}</td>
-			<td>
+			<td class="tabel">{{ $p->pegawai_nama }}</td>
+			<td class="tabel">{{ $p->pegawai_alamat }}</td>
+			<td  class="tabel">
+                <a href="/pegawai/view/{{ $p->pegawai_id }}">View Detail</a>
+                |
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
@@ -39,6 +42,5 @@
 		@endforeach
 	</table>
 
-
-</body>
+    {{ $pegawai->links() }}
 @endsection

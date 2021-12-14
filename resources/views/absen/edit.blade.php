@@ -33,7 +33,7 @@
             <br>
 		Status
         <input type="radio" id="hadir" name="status" value="H" @if ($p->Status === "H") checked="checked" @endif>
-        <label for="hadir">HADIR</label>
+        <label for="hadir">HADIR</label><br>
         <input type="radio" id="tidak" name="status" value="T" @if ($p->Status === "T") checked="checked" @endif>
         <label for="tidak">TIDAK HADIR</label><br>
 
