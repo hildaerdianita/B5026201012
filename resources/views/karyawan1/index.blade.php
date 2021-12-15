@@ -34,7 +34,7 @@
 			<td class="tabel">{{ $k->Pangkat }}</td>
 			<td  class="tabel"> {{ $k->Gaji }}</td>
             <td  class="tabel">
-				<a href="/absen/hapus/{{ $k->NIP }}" class="btn btn-danger" >Hapus</a>
+				<a href="/karyawan1/hapus/{{ $k->NIP }}" class="btn btn-danger" >Hapus</a>
 			</td>
 		</tr>
 		@endforeach
