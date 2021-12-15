@@ -100,7 +100,7 @@
           <a href="http://127.0.0.1:8000/absen">Absen</a>
           <a href="http://127.0.0.1:8000/mutasi">Mutasi</a>
           <a href="http://127.0.0.1:8000/kursi">Kursi</a>
-          <a href="#">P</a>
+          <a href="http://127.0.0.1:8000/karyawan1">Karyawan1</a>
         </div>
 
         <div id="main">

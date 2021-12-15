@@ -50,5 +50,5 @@
 		@endforeach
 	</table>
 
-
+    {{ $mutasi->links() }}
     @endsection

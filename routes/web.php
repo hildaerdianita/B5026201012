@@ -64,3 +64,8 @@ Route::get('/kursi/hapus/{id}','KursiController@hapus');
 Route::get('/kursi/cari','KursiController@cari');
 Route::get('/kursi/view/{id}','KursiController@detail');
 
+//route CRUD Karyawan1
+Route::get('/karyawan1','Karyawan1Controller@index');
+Route::get('/karyawan1/tambah','Karyawan1Controller@tambah');
+Route::post('/karyawan1/store','Karyawan1Controller@store');
+Route::get('/karyawan1/hapus/{id}','Karyawan1Controller@hapus');
